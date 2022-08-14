@@ -23,6 +23,9 @@
       "@components/*": [
         "components/*"
       ],
+      "@api": [
+        "api/*"
+      ],
       "@assets/*": [
         "assets/*"
       ],
