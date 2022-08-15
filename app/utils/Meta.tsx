@@ -12,6 +12,7 @@ const Meta: FC<IMeta> = ({ title, description }) => {
 			<Head>
 				<title>{title}</title>
 				<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+				<meta charSet='UTF-8' />
 				{description ? (
 					<meta
 						itemProp='description'
@@ -21,6 +22,8 @@ const Meta: FC<IMeta> = ({ title, description }) => {
 				) : (
 					<meta name='robots' content='noindex, nofollow' />
 				)}
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
+				<meta name='theme-color' content='#ea580c' />
 			</Head>
 		</>
 	);
