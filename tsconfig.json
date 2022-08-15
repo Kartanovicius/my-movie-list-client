@@ -23,7 +23,7 @@
       "@components/*": [
         "components/*"
       ],
-      "@api": [
+      "@api/*": [
         "api/*"
       ],
       "@assets/*": [
@@ -41,10 +41,10 @@
       "@types/*": [
         "types/*"
       ],
-      "@store": [
+      "@store/*": [
         "store/*"
       ],
-      "@utils": [
+      "@utils/*": [
         "utils/*"
       ]
     }
