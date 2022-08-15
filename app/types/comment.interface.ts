@@ -1,11 +1,11 @@
 import { IBase } from 'types/base.interface';
-import { IMovie } from 'types/movie.interface';
+import { IShow } from 'types/show.interface';
 import { IUser } from 'types/user.interface';
 
-export interface IMovieComment extends IBase {
+export interface IComment extends IBase {
 	message: string;
 
 	user: IUser;
 
-	movie: IMovie;
+	show: IShow;
 }
