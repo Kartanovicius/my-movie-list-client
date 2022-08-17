@@ -1,0 +1,25 @@
+.navigation {
+	ul {
+		@apply flex flex-col gap-4;
+
+		li {
+			@apply m-auto p-2 rounded-lg;
+
+			.icon svg {
+				@apply fill-gray-400;
+			}
+
+			&.active {
+				@apply bg-cyan-700;
+
+				.icon svg {
+					@apply fill-gray-50;
+				}
+			}
+
+			&:hover {
+				@apply bg-cyan-700;
+			}
+		}
+	}
+}
