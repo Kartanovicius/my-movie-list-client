@@ -7,9 +7,12 @@ import styles from './Sidebar.module.scss';
 
 const Sidebar: FC = () => {
 	return (
-		<aside className={styles.sidebar}>
-			<Menu items={menu} />
-		</aside>
+		<>
+			<div className={styles.sidebar_container}></div>
+			<aside className={styles.sidebar}>
+				<Menu items={menu} />
+			</aside>
+		</>
 	);
 };
 
