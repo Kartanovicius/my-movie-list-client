@@ -16,7 +16,7 @@ const MenuItem: FC<{ item: IMenuItem; iconSize: number }> = ({
 	const { asPath } = useRouter();
 
 	if (item.link === '/user')
-		if (!user) item.link = `/login`;
+		if (!user) item.link = `/auth`;
 		else item.link = `/user/${user?.id}`;
 
 	return (
