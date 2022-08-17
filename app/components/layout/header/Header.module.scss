@@ -1,0 +1,7 @@
+.header {
+	@apply w-full v-gap-components;
+
+	.title {
+		@apply font-bold text-3xl;
+	}
+}

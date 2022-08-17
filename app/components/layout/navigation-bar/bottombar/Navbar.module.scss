@@ -1,0 +1,7 @@
+.navbar {
+	@apply fixed bottom-0 w-full py-2 bg-cyan-800 block md:hidden;
+
+	ul {
+		@apply flex flex-row justify-between;
+	}
+}

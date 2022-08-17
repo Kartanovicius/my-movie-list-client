@@ -1,7 +1,8 @@
 import { FC, PropsWithChildren } from 'react';
 
 import Header from '@components/layout/header/Header';
-import Sidebar from '@components/layout/sidebar/Sidebar';
+import Navbar from '@components/layout/navigation-bar/bottombar/Navbar';
+import Sidebar from '@components/layout/navigation-bar/sidebar/Sidebar';
 
 import Meta from '@utils/Meta';
 
@@ -15,6 +16,7 @@ const Layout: FC<
 			<Meta title={title} description={description} />
 			<main className={styles.main}>
 				<Sidebar />
+				<Navbar />
 				<section className={styles.content}>
 					<Header></Header>
 					<div className={styles.wrapper}>{children}</div>

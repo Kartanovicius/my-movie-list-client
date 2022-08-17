@@ -4,7 +4,7 @@ import {
 	AiOutlineVideoCamera,
 } from 'react-icons/ai';
 
-import { IMenuItem } from '@components/layout/sidebar/menu/menu.interface';
+import { IMenuItem } from '@components/layout/navigation-bar/menu/menu.interface';
 
 export const menu: IMenuItem[] = [
 	{
