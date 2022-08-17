@@ -12,7 +12,7 @@ const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
 	const { user } = useAuth();
 	const { asPath } = useRouter();
 
-	if (item.link === 'user')
+	if (item.link === '/user')
 		if (!user) return null;
 		else item.link = `/user/${user?.id}`;
 	return (
