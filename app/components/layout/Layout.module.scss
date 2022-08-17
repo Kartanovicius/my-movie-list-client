@@ -1,8 +1,8 @@
 .main {
-	@apply flex flex-wrap;
+	@apply flex flex-wrap py-8;
 
 	.content {
-		width: 82%;
+		width: 90%;
 
 		.wrapper {
 			@apply pl-6 pr-8;
