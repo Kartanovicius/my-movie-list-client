@@ -24,7 +24,6 @@ const MenuItem: FC<{ item: IMenuItem; iconSize: number }> = ({
 			<Link href={item.link}>
 				<a>
 					<span className={styles.icon}>
-						{}
 						<item.icon size={iconSize} />
 					</span>
 				</a>
