@@ -1,0 +1,32 @@
+.input {
+	@apply relative mb-6;
+
+	.input_field {
+		@apply bg-cyan-800 border border-gray-700 text-gray-50 text-sm rounded-lg block w-full p-2.5;
+
+		&::placeholder {
+			@apply text-gray-400;
+		}
+
+		&:hover {
+			@apply border-gray-500;
+		}
+
+		&:focus-visible {
+			@apply border-orange-500 outline-0;
+		}
+
+		&.error {
+			@apply border-red-500 text-red-50;
+		}
+	}
+
+	.label {
+		@apply block ml-2.5 mb-1 text-sm;
+	}
+
+	p.error {
+		@apply absolute -bottom-5 left-2.5 w-full text-red-500;
+		font-size: 0.8rem;
+	}
+}
