@@ -2,4 +2,7 @@
 
 @tailwind base;
 @tailwind components;
+@layer components {
+	@import './app/components/ui/button/Button.module';
+}
 @tailwind utilities;

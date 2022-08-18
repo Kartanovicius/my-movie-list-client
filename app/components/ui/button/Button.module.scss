@@ -1,0 +1,42 @@
+.button {
+	@apply flex-center gap-1.5 bg-orange-500 font-light;
+
+	&:disabled {
+		@apply bg-gray-700 text-gray-400;
+	}
+
+	&:hover {
+		@apply brightness-90;
+	}
+
+	&:focus {
+		@apply brightness-105;
+	}
+
+	&.full_width {
+		@apply w-full;
+	}
+
+	&.regular {
+		@apply rounded;
+	}
+
+	&.extra {
+		@apply rounded-3xl;
+	}
+
+	&.small {
+		@apply py-2 px-3;
+		font-size: 0.8rem;
+	}
+
+	&.medium {
+		@apply py-2 px-4;
+		font-size: 0.9rem;
+	}
+
+	&.large {
+		@apply py-3 px-6;
+		font-size: 0.9rem;
+	}
+}
