@@ -11,6 +11,7 @@ module.exports = {
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
 		'@storybook/addon-controls',
+		'@storybook/addon-interactions',
 		{
 			name: '@storybook/addon-postcss',
 			options: {
@@ -23,12 +24,12 @@ module.exports = {
 	webpackFinal: async config => {
 		config.module.rules.push({
 			test: /\.scss$/,
-			sideEffects: true,
 			use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
 		});
 
 		return config;
 	},
+	framework: '@storybook/react',
 	typescript: {
 		check: false,
 		checkOptions: {},
