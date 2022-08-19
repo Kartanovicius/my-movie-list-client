@@ -1,9 +1,9 @@
 import cn from 'classnames';
-import { FC, forwardRef } from 'react';
+import { forwardRef } from 'react';
 
 import { IField } from './field.interface';
 
-const Field: FC = forwardRef<HTMLInputElement, IField>(
+const Field = forwardRef<HTMLInputElement, IField>(
 	({ label, error, className, type = 'text', style, ...rest }, ref) => {
 		return (
 			<div className={'input'} style={style}>
