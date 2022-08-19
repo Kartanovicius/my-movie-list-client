@@ -1,16 +1,52 @@
 .button {
-	@apply flex-center gap-1.5 bg-orange-500 font-light;
+	@apply flex-center gap-1.5 font-light border;
 
-	&:disabled {
-		@apply bg-gray-700 text-gray-400;
+	&.filled {
+		@apply bg-orange-500 border border-orange-500;
+
+		&:disabled {
+			@apply bg-gray-700 text-gray-400 border-gray-700;
+		}
+
+		&:hover {
+			@apply brightness-90;
+		}
+
+		&:focus {
+			@apply brightness-105;
+		}
 	}
 
-	&:hover {
-		@apply brightness-90;
+	&.outlined {
+		@apply bg-transparent border border-white;
+
+		&:disabled {
+			@apply text-gray-400 border-gray-700;
+		}
+
+		&:hover {
+			@apply border-orange-500;
+		}
+
+		&:focus {
+			@apply border-orange-500 text-orange-500 brightness-125;
+		}
 	}
 
-	&:focus {
-		@apply brightness-105;
+	&.text {
+		@apply text-white bg-transparent border-transparent;
+
+		&:disabled {
+			@apply text-gray-400;
+		}
+
+		&:hover {
+			@apply text-orange-500;
+		}
+
+		&:focus {
+			@apply text-orange-500 brightness-125;
+		}
 	}
 
 	&.full_width {

@@ -13,6 +13,10 @@ export default {
 		className: {
 			control: { type: 'text' },
 		},
+		variant: {
+			options: ['filled', 'outlined', 'text'],
+			control: { type: 'radio' },
+		},
 		disabled: {
 			control: { type: 'boolean' },
 		},
@@ -34,6 +38,7 @@ const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
 const TemplateWithIcon: ComponentStory<typeof Button> = ({
 	children,
+	variant,
 	className,
 	fullWidth,
 	rounded,
@@ -44,6 +49,7 @@ const TemplateWithIcon: ComponentStory<typeof Button> = ({
 		size={size}
 		rounded={rounded}
 		fullWidth={fullWidth}
+		variant={variant}
 	>
 		<ButtonIcon>🐑</ButtonIcon>
 		{children}

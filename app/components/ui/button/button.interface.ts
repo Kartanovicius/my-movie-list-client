@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes } from 'react';
 
 interface IButtonProps {
+	variant?: 'filled' | 'outlined' | 'text';
 	rounded?: 'regular' | 'extra';
 	size?: 'small' | 'medium' | 'large';
 	fullWidth?: boolean;

@@ -13,6 +13,7 @@ export const ButtonIcon: FC<PropsWithChildren<IButtonIcon>> = ({
 const Button: FC<PropsWithChildren<IButton>> = ({
 	children,
 	className,
+	variant = 'filled',
 	rounded = 'regular',
 	size = 'medium',
 	fullWidth,
@@ -25,6 +26,7 @@ const Button: FC<PropsWithChildren<IButton>> = ({
 					'button',
 					size,
 					rounded,
+					variant,
 					fullWidth && 'full_width',
 					className,
 				)}
