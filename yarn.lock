@@ -1587,10 +1587,10 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@reduxjs/toolkit@^1.8.4":
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.8.4.tgz#8f226acff22adf539d078b64fa2eafc3f8d1d045"
-  integrity sha512-IpFq1WI7sCYeLQpDCGvlcQY9wn70UpAM3cOLq78HRnVn1746RI+l3y5xcuOeVOxORaxABJh3cfJMxycD2IwH5w==
+"@reduxjs/toolkit@^1.8.5":
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.8.5.tgz#c14bece03ee08be88467f22dc0ecf9cf875527cd"
+  integrity sha512-f4D5EXO7A7Xq35T0zRbWq5kJQyXzzscnHKmjnu2+37B3rwHU6mX9PYlbfXdnxcY6P/7zfmjhgan0Z+yuOfeBmA==
   dependencies:
     immer "^9.0.7"
     redux "^4.1.2"
@@ -9465,6 +9465,11 @@ synchronous-promise@^2.0.15:
   version "2.0.15"
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.15.tgz#07ca1822b9de0001f5ff73595f3d08c4f720eb8e"
   integrity sha512-k8uzYIkIVwmT+TcglpdN50pS2y1BDcUnBPK9iJeGu0Pl1lOI8pD6wtzgw91Pjpe+RxtTncw32tLxs/R0yNL2Mg==
+
+tailwind-merge@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.5.1.tgz#fb7d6b724aef702b11fd01fddf1be1d8aeab3d7a"
+  integrity sha512-lqmJS6+3vsNQY77TMMRBVFbWyMcIAAD/09Vs+IXCt3cza58/O7X5DBbOu+7p6LPhw0efK45LL8kAJ7IORccMag==
 
 tailwindcss@^3.1.8:
   version "3.1.8"
