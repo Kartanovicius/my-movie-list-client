@@ -1,0 +1,21 @@
+.auth_content {
+	@apply mx-5 md:mx-10 h-full flex flex-col justify-between;
+
+	.top {
+		.title {
+			@apply mt-10 mb-2 font-bold text-xl;
+		}
+
+		.auth_switch {
+			@apply text-sm mb-5;
+
+			span {
+				@apply ml-1 text-orange-500 font-bold cursor-pointer;
+			}
+		}
+	}
+
+	.bottom {
+		@apply block mb-10 md:hidden w-full md:w-fit;
+	}
+}

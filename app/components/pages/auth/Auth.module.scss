@@ -1,0 +1,12 @@
+.container {
+	@apply h-screen w-screen flex;
+	min-height: 500px;
+
+	.greeting {
+		@apply w-5/12 hidden md:flex-center;
+	}
+
+	.auth {
+		@apply h-full md:w-7/12 w-screen;
+	}
+}

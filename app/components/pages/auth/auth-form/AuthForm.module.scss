@@ -1,0 +1,8 @@
+.form {
+	@apply flex flex-col gap-2;
+
+	.submit {
+		@apply mt-4 w-full sm:w-fit;
+		min-width: 120px;
+	}
+}

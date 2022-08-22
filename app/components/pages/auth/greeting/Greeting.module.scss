@@ -1,0 +1,21 @@
+.greeting_container {
+	@apply bg-orange-600 rounded-2xl;
+	height: calc(100% - 24px);
+	width: calc(100% - 24px);
+
+	.greeting {
+		@apply mx-6 my-10;
+
+		h2 {
+			@apply text-xs font-bold mb-20 cursor-pointer;
+		}
+
+		h1 {
+			@apply text-3xl mb-3 font-bold;
+		}
+
+		p {
+			@apply text-sm;
+		}
+	}
+}
