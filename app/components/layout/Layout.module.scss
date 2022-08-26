@@ -2,7 +2,7 @@
 	@apply flex flex-wrap;
 
 	.content {
-		@apply py-8 w-full md:w-11/12;
+		@apply py-8 w-full md:w-11/12 mb-10 md:mb-0;
 
 		.wrapper,
 		Header {
