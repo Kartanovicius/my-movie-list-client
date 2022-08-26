@@ -9,8 +9,12 @@ import Meta from '@utils/Meta';
 import styles from './Layout.module.scss';
 
 const Layout: FC<
-	PropsWithChildren<{ title: string; description?: string }>
-> = ({ title, description, children }) => {
+	PropsWithChildren<{
+		title: string;
+		description?: string;
+		headerTitle?: string;
+	}>
+> = ({ title, description, headerTitle, children }) => {
 	return (
 		<div>
 			<Meta title={title} description={description} />
@@ -18,7 +22,7 @@ const Layout: FC<
 				<Sidebar />
 				<Navbar />
 				<section className={styles.content}>
-					<Header></Header>
+					<Header title={headerTitle}></Header>
 					<div className={styles.wrapper}>{children}</div>
 				</section>
 			</main>

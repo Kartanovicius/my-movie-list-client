@@ -1,12 +1,18 @@
 import { FC } from 'react';
 
+import { IHeader } from '@components/layout/header/header.inteface';
+
 import styles from './Header.module.scss';
 
-const Header: FC = () => {
+const Header: FC<IHeader> = ({ title }) => {
 	return (
-		<header className={styles.header}>
-			<span className={styles.title}>My cinema</span>
-		</header>
+		<>
+			{title && (
+				<header className={styles.header}>
+					<span className={styles.title}>{title}</span>
+				</header>
+			)}
+		</>
 	);
 };
 

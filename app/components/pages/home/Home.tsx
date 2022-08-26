@@ -7,7 +7,10 @@ import Genre from '@components/pages/home/genre/Genre';
 
 const Home: FC = () => {
 	return (
-		<Layout title='My Movie List: Ratings, Reviews, and the Best Movies & TV Shows'>
+		<Layout
+			title='My Movie List: Ratings, Reviews, and the Best Movies & TV Shows'
+			headerTitle='My cinema'
+		>
 			<Genre />
 			<Discover />
 			<Catalog />
