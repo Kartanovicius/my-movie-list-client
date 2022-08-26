@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: TypeAppProps) {
 			<Provider store={store}>
 				<PersistGate persistor={persistor} loading={null}>
 					<AuthProvider Component={Component}>
-						<Component {...pageProps} />;
+						<Component {...pageProps} />
 						<ReduxToastr position='bottom-right' />
 					</AuthProvider>
 				</PersistGate>
