@@ -9,3 +9,9 @@ export interface IComment extends IBase {
 
 	show: IShow;
 }
+
+export interface ICommentDto {
+	message: string;
+
+	showId: number;
+}

@@ -1,18 +1,15 @@
-import { IMovie } from 'types/movie.interface';
-import { ITvSeries } from 'types/tvseries.inteface';
+import { IShow } from 'types/show.interface';
 
-export interface IUser {
+import { IBase } from './base.interface';
+
+export interface IUser extends IBase {
 	email: string;
 
 	name: string;
 
-	watchedCount?: number;
+	role: 'user' | 'admin';
 
-	description: string;
+	avatarId: number;
 
-	avatarPath: string;
-
-	likedMovies: IMovie[];
-
-	likedTvSeries: ITvSeries[];
+	likedShows: IShow[];
 }

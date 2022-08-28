@@ -20,6 +20,10 @@ export const api = createApi({
 		},
 	}),
 	endpoints: builder => ({
+		getProfiles: builder.query<IUser[], void>({
+			query: () => `${USER}`,
+			providesTags: () => [{ type: 'Profile' }],
+		}),
 		getProfile: builder.query<IUser, any>({
 			query: () => `${USER}/profile`,
 			providesTags: () => [{ type: 'Profile' }],

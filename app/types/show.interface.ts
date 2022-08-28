@@ -15,3 +15,13 @@ export interface IShow extends IBase {
 
 	trailerPath: string;
 }
+
+export interface IShowDto {
+	name: string;
+
+	description: string;
+
+	trailerPath: string;
+
+	posterPath: string;
+}

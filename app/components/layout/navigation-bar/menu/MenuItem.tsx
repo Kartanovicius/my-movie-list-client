@@ -15,13 +15,17 @@ const MenuItem: FC<{ item: IMenuItem; iconSize: number }> = ({
 	const { user } = useAuth();
 	const { asPath } = useRouter();
 
-	if (item.link === '/user')
-		if (!user) item.link = `/auth`;
-		else item.link = `/user/${user?.id}`;
+	if (item.link === '/user' && !user) item.link = `/auth`;
+	else if (item.link === '/auth' && user) item.link = `/user`;
 
 	return (
 		<li className={asPath === item.link ? styles.active : ''}>
-			<Link href={item.link}>
+			<Link
+				href={{
+					pathname: item.link,
+					query: { id: user?.id },
+				}}
+			>
 				<a>
 					<span className={styles.icon}>
 						<item.icon size={iconSize} />
