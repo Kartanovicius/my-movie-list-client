@@ -42,8 +42,13 @@ module.exports = {
 	},
 	plugins: [
 		require('tailwind-scrollbar-hide'),
-		plugin(({ addUtilities }) => {
+		plugin(({ addUtilities, addComponents }) => {
 			addUtilities({
+				'.v-gap-components': {
+					marginBottom: '1.5rem',
+				},
+			});
+			addComponents({
 				'.flex-center-between': {
 					display: 'flex',
 					alignItems: 'center',
@@ -53,9 +58,6 @@ module.exports = {
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'center',
-				},
-				'.v-gap-components': {
-					marginBottom: '1.5rem',
 				},
 			});
 		}),
