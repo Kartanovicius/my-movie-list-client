@@ -41,6 +41,7 @@ module.exports = {
 		},
 	},
 	plugins: [
+		require('tailwind-scrollbar-hide'),
 		plugin(({ addUtilities }) => {
 			addUtilities({
 				'.flex-center-between': {

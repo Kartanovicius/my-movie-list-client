@@ -29,7 +29,8 @@
     "react-redux-toastr": "^7.6.9",
     "redux-persist": "^6.0.0",
     "sass": "^1.49.9",
-    "tailwind-merge": "^1.5.1"
+    "tailwind-merge": "^1.5.1",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
