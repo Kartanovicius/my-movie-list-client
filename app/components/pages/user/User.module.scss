@@ -1,0 +1,15 @@
+.main {
+	@apply flex flex-col sm:flex-row gap-5;
+
+	.avatar {
+		@apply rounded-2xl object-cover;
+	}
+
+	.user_details {
+		@apply flex flex-col gap-3;
+
+		&__name {
+			@apply text-3xl;
+		}
+	}
+}

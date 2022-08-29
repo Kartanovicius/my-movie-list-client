@@ -8,6 +8,9 @@ import { useAuth } from '@hooks/useAuth';
 
 import styles from './Menu.module.scss';
 
+const USER = '/user';
+const AUTH = '/auth';
+
 const MenuItem: FC<{ item: IMenuItem; iconSize: number }> = ({
 	item,
 	iconSize,
@@ -15,16 +18,20 @@ const MenuItem: FC<{ item: IMenuItem; iconSize: number }> = ({
 	const { user } = useAuth();
 	const { asPath } = useRouter();
 
-	if (item.link === '/user' && !user) item.link = `/auth`;
-	else if (item.link === '/auth' && user) item.link = `/user`;
+	if (item.link === USER && !user) item.link = AUTH;
+	else if (item.link === AUTH && user) item.link = USER;
 
 	return (
 		<li className={asPath === item.link ? styles.active : ''}>
 			<Link
-				href={{
-					pathname: item.link,
-					query: { id: user?.id },
-				}}
+				href={
+					item.link === USER
+						? {
+								pathname: item.link,
+								query: { id: user?.id },
+						  }
+						: { pathname: item.link }
+				}
 			>
 				<a>
 					<span className={styles.icon}>
