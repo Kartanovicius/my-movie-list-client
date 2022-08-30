@@ -1,5 +1,5 @@
 .large_card {
-	@apply w-full md:w-8/12 rounded-2xl flex flex-col justify-end gap-2 relative cursor-pointer;
+	@apply w-full rounded-2xl flex flex-col justify-end gap-2 relative cursor-pointer;
 	height: 300px;
 
 	&::before {
