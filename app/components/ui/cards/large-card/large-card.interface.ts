@@ -1,6 +1,7 @@
 import { HTMLAttributes } from 'react';
 
 interface ILargeCardProps {
+	showId: number;
 	img: { src: string; alt: string };
 }
 
