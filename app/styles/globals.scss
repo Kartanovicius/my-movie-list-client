@@ -5,5 +5,6 @@
 @layer components {
 	@import './app/components/ui/button/Button.module';
 	@import './app/components/ui/field/Field.module';
+	@import './app/components/ui/cards/large-card/LargeCard.module';
 }
 @tailwind utilities;
