@@ -36,5 +36,5 @@ Label.args = {
 
 export const Error = Template.bind({});
 Error.args = {
-	error: { message: 'Error message!' },
+	error: { message: 'Error message!', type: 'required' },
 };
