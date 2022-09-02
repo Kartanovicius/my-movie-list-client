@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FC } from 'react';
 import { GenreEnum } from 'types/show.interface';
 
@@ -12,21 +12,29 @@ const Genre: FC = () => {
 	const genres: string[] = Object.keys(GenreEnum).filter(v => isNaN(Number(v)));
 	genres.unshift('all');
 
+	const router = useRouter();
+
+	function onClickHandler(key: string) {
+		router.push({
+			pathname: SHOWS,
+			query: { type: key },
+		});
+	}
+
 	return (
 		<ul className={styles.list}>
 			{genres.map(key => {
 				return (
 					<li key={key}>
-						<Link
-							href={{
-								pathname: SHOWS,
-								query: { type: key },
+						<Button
+							size={'large'}
+							rounded={'extra'}
+							onClick={() => {
+								onClickHandler(key);
 							}}
 						>
-							<Button size={'large'} rounded={'extra'}>
-								{key}
-							</Button>
-						</Link>
+							{key}
+						</Button>
 					</li>
 				);
 			})}
