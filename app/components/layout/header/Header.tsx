@@ -9,7 +9,7 @@ const Header: FC<IHeader> = ({ title }) => {
 		<>
 			{title && (
 				<header className={styles.header}>
-					<span className={styles.title}>{title}</span>
+					<h1 className={styles.title}>{title}</h1>
 				</header>
 			)}
 		</>
