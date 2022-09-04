@@ -1,5 +1,5 @@
 .navbar {
-	@apply fixed bottom-0 w-full py-2 bg-cyan-800 block md:hidden;
+	@apply fixed bottom-0 w-full py-2 bg-cyan-800 block md:hidden z-50;
 
 	ul {
 		@apply flex flex-row justify-between;
