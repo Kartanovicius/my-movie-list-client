@@ -1,17 +1,14 @@
 import { useRouter } from 'next/router';
 import { FC } from 'react';
-import { GenreEnum } from 'types/show.interface';
 
-import Button from '@components/ui/button/Button';
+import Button, { ButtonIcon } from '@components/ui/button/Button';
 
 import { SHOWS } from '@utils/constants';
 
 import styles from './Genre.module.scss';
+import { genres } from './genre.data';
 
 const Genre: FC = () => {
-	const genres: string[] = Object.keys(GenreEnum).filter(v => isNaN(Number(v)));
-	genres.unshift('all');
-
 	const router = useRouter();
 
 	function onClickHandler(key: string) {
@@ -25,15 +22,16 @@ const Genre: FC = () => {
 		<ul className={styles.list}>
 			{genres.map(key => {
 				return (
-					<li key={key}>
+					<li key={key.title}>
 						<Button
 							size={'large'}
 							rounded={'extra'}
 							onClick={() => {
-								onClickHandler(key);
+								onClickHandler(key.title);
 							}}
 						>
-							{key}
+							<ButtonIcon>{key.icon}</ButtonIcon>
+							{key.title}
 						</Button>
 					</li>
 				);

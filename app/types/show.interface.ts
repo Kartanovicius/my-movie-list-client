@@ -11,7 +11,17 @@ export interface IShow extends IBase {
 
 	description: string;
 
-	genre: Array<GenreEnum>;
+	genre: [
+		| 'comedy'
+		| 'fantasy'
+		| 'drama'
+		| 'history'
+		| 'horror'
+		| 'adventure'
+		| 'action'
+		| 'noir'
+		| 'thriller',
+	];
 
 	posterPath: string;
 
@@ -26,16 +36,4 @@ export interface IShowDto {
 	trailerPath: string;
 
 	posterPath: string;
-}
-
-export enum GenreEnum {
-	'comedy',
-	'fantasy',
-	'drama',
-	'history',
-	'horror',
-	'adventure',
-	'action',
-	'noir',
-	'thriller',
 }
