@@ -23,6 +23,14 @@ export const showApi = api.injectEndpoints({
 			query: () => `/${SHOW}/highest-rated`,
 			providesTags: () => [{ type: 'Show' }],
 		}),
+		getLastAddedShow: builder.query<IShow, void>({
+			query: () => ({
+				url: `/${SHOW}`,
+				params: { 'per-page': 1, page: 1, order: 'DESC' },
+			}),
+			providesTags: () => [{ type: 'Show' }],
+			transformResponse: (response: IShow[]) => response[0],
+		}),
 		createShow: builder.mutation<IShow, void>({
 			query: () => ({
 				url: `/${SHOW}`,
