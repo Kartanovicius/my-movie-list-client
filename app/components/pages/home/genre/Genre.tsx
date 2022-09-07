@@ -3,35 +3,46 @@ import { FC } from 'react';
 
 import Button, { ButtonIcon } from '@components/ui/button/Button';
 
-import { SHOWS } from '@utils/constants';
-
 import styles from './Genre.module.scss';
 import { genres } from './genre.data';
 
 const Genre: FC = () => {
 	const router = useRouter();
+	const { query } = useRouter();
 
-	function onClickHandler(key: string) {
-		router.push({
-			pathname: SHOWS,
-			query: { type: key },
-		});
+	function onClickHandler(type: string) {
+		if (type === genres[0].title) {
+			router.push({
+				pathname: '',
+			});
+		} else {
+			router.push({
+				pathname: '',
+				query: { type },
+			});
+		}
 	}
 
 	return (
 		<ul className={styles.list}>
-			{genres.map(key => {
+			{genres.map(genre => {
 				return (
-					<li key={key.title}>
+					<li key={genre.title}>
 						<Button
 							size={'large'}
 							rounded={'extra'}
+							className={
+								query.type !== genre.title &&
+								(genre.title !== genres[0].title || query.type)
+									? '!bg-cyan-700 !border-cyan-700'
+									: ''
+							}
 							onClick={() => {
-								onClickHandler(key.title);
+								onClickHandler(genre.title);
 							}}
 						>
-							<ButtonIcon>{key.icon}</ButtonIcon>
-							{key.title}
+							<ButtonIcon>{genre.icon}</ButtonIcon>
+							{genre.title}
 						</Button>
 					</li>
 				);
