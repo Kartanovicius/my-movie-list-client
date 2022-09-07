@@ -7,15 +7,16 @@ interface ILargeCardProps {
 
 type TypeLargeCardPropsField = HTMLAttributes<HTMLDivElement> & ILargeCardProps;
 
-export interface ILargeCard extends TypeLargeCardPropsField {}
+export interface IMovieLargeCard extends TypeLargeCardPropsField {}
 
-export interface ILargeCardTitle extends HTMLAttributes<HTMLHeadingElement> {}
+export interface IMovieLargeCardTitle
+	extends HTMLAttributes<HTMLHeadingElement> {}
 
-export interface ILargeCardDescription
+export interface IMovieLargeCardDescription
 	extends HTMLAttributes<HTMLParagraphElement> {}
 
-export interface ILargeCardAdditionalInfo
+export interface IMovieLargeCardAdditionalInfo
 	extends HTMLAttributes<HTMLDivElement> {}
 
-export interface ILargeCardAdditionalInfoItem
+export interface IMovieLargeCardAdditionalInfoItem
 	extends HTMLAttributes<HTMLParagraphElement> {}
