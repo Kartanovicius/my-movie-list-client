@@ -2,5 +2,7 @@
 	@apply inline-flex gap-4 overflow-x-scroll scrollbar-hide v-gap-components;
 	margin-right: -1.5rem;
 	padding-right: 1.5rem;
-	width: calc(100% + 1.5rem);
+	margin-left: -1.5rem;
+	padding-left: 1.5rem;
+	width: calc(100% + 3rem);
 }
