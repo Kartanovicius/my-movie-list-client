@@ -1,0 +1,41 @@
+.small-card {
+	@apply flex flex-col justify-end gap-2 cursor-pointer;
+
+	&-img-container {
+		@apply rounded-2xl relative aspect-video;
+
+		&::after {
+			@apply w-full h-full absolute top-0 left-0
+			bg-gradient-to-t from-orange-900 rounded-2xl opacity-0 transition-opacity duration-200 z-10 content-[''];
+		}
+
+		&:hover::after {
+			@apply opacity-20;
+		}
+
+		&-missing-img {
+			@apply h-full w-full flex-center border-2 border-cyan-700 rounded-2xl;
+		}
+
+		img {
+			@apply absolute top-0 left-0 w-full h-full rounded-2xl object-cover object-center;
+		}
+	}
+
+	&-content {
+		@apply flex flex-row justify-between items-end gap-3;
+		width: inherit;
+
+		&-title {
+			@apply font-medium;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			width: 65%;
+		}
+
+		&-additional-info {
+			@apply text-sm flex flex-row gap-3 font-light text-gray-500;
+		}
+	}
+}
