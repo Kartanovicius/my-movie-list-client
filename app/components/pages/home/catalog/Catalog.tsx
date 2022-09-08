@@ -63,7 +63,7 @@ const Catalog: FC = () => {
 			</ContentHorizontalRow>
 			{/* mostViewedShows */}
 			<ContentHorizontalRow>
-				<ContentHorizontalRowName pathname={'abc'}>
+				<ContentHorizontalRowName>
 					Most Viewed Movies & Shows
 				</ContentHorizontalRowName>
 				<ContentHorizontalRowItemContainer>
