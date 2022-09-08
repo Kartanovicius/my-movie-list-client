@@ -2,7 +2,11 @@
 	@apply v-gap-components;
 
 	&-name {
-		@apply mb-6 cursor-pointer w-fit text-xl font-bold;
+		@apply mb-6 w-fit text-xl font-bold;
+
+		&.clickable {
+			@apply cursor-pointer;
+		}
 	}
 
 	&-item-container {

@@ -12,17 +12,24 @@ import {
 export const ContentHorizontalRowName: FC<
 	PropsWithChildren<IContentHorizontalRowName>
 > = ({ children, pathname, query, className, ...rest }) => {
-	return (
+	return pathname ? (
 		<Link
 			href={{
 				pathname: pathname,
 				query: query,
 			}}
 		>
-			<h2 className={cn('content-horizontal-row-name', className)} {...rest}>
+			<h2
+				className={cn('content-horizontal-row-name clickable', className)}
+				{...rest}
+			>
 				{children}
 			</h2>
 		</Link>
+	) : (
+		<h2 className={cn('content-horizontal-row-name', className)} {...rest}>
+			{children}
+		</h2>
 	);
 };
 
