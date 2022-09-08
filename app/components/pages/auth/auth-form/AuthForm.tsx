@@ -55,6 +55,7 @@ const AuthForm: FC<IAuthForm> = ({ type }) => {
 						message: 'Email is invalid',
 					},
 				})}
+				autoComplete={'username'}
 				label={'Email'}
 				type={'text'}
 				error={errors.email}
@@ -68,6 +69,7 @@ const AuthForm: FC<IAuthForm> = ({ type }) => {
 						message: 'Password must contain at least 6 characters',
 					},
 				})}
+				autoComplete={type === 'login' ? 'current-password' : 'new-password'}
 				label={'Password'}
 				type={'password'}
 				error={errors.password}
