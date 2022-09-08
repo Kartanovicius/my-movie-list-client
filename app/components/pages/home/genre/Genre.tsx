@@ -10,8 +10,14 @@ const Genre: FC = () => {
 	const router = useRouter();
 	const { query } = useRouter();
 
+	function toTitleCase(str: string) {
+		return str.replace(/\w\S*/g, function (txt) {
+			return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+		});
+	}
+
 	function onClickHandler(type: string) {
-		if (type === genres[0].title) {
+		if (type === genres[0].name) {
 			router.push({
 				pathname: '',
 			});
@@ -27,22 +33,22 @@ const Genre: FC = () => {
 		<ul className={styles.list}>
 			{genres.map(genre => {
 				return (
-					<li key={genre.title}>
+					<li key={genre.name}>
 						<Button
 							size={'large'}
 							rounded={'extra'}
 							className={
-								query.type !== genre.title &&
-								(genre.title !== genres[0].title || query.type)
+								query.type !== genre.name &&
+								(genre.name !== genres[0].name || query.type)
 									? '!bg-cyan-700 !border-cyan-700'
 									: ''
 							}
 							onClick={() => {
-								onClickHandler(genre.title);
+								onClickHandler(genre.name);
 							}}
 						>
 							<ButtonIcon>{genre.icon}</ButtonIcon>
-							{genre.title}
+							{toTitleCase(genre.name)}
 						</Button>
 					</li>
 				);

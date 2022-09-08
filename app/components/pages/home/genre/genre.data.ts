@@ -2,39 +2,39 @@ import { IGenreItem } from '@components/pages/home/genre/genre.interface';
 
 export const genres: IGenreItem[] = [
 	{
-		title: 'all',
+		name: 'all',
 		icon: '🍿',
 	},
 	{
-		title: 'comedy',
+		name: 'comedy',
 		icon: '🤣',
 	},
 	{
-		title: 'fantasy',
+		name: 'fantasy',
 		icon: '🦄',
 	},
 	{
-		title: 'drama',
+		name: 'drama',
 		icon: '🎭',
 	},
 	{
-		title: 'history',
+		name: 'history',
 		icon: '📜',
 	},
 	{
-		title: 'horror',
+		name: 'horror',
 		icon: '😱',
 	},
 	{
-		title: 'adventure',
+		name: 'adventure',
 		icon: '🗺',
 	},
 	{
-		title: 'action',
+		name: 'action',
 		icon: '💥',
 	},
 	{
-		title: 'thriller',
+		name: 'thriller',
 		icon: '🧩',
 	},
 ];

@@ -1,4 +1,4 @@
 export interface IGenreItem {
-	title: string;
+	name: string;
 	icon: string;
 }
