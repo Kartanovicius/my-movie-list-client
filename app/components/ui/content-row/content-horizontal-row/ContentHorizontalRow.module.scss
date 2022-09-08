@@ -1,0 +1,19 @@
+.content-horizontal-row {
+	@apply v-gap-components;
+
+	&-name {
+		@apply mb-6 cursor-pointer w-fit text-xl font-bold;
+	}
+
+	&-item-container {
+		@apply grid gap-4 grid-cols-none grid-flow-col
+    	w-full h-full overflow-x-scroll scrollbar-hide scroll-smooth;
+		grid-auto-columns: calc(12.5% - 1rem);
+		width: calc(100% + 1.5rem);
+		padding-right: 1.5rem;
+	}
+
+	&-item {
+		@apply col-span-5 md:col-span-2;
+	}
+}
