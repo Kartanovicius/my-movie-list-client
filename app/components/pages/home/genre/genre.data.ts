@@ -11,7 +11,7 @@ export const genres: IGenreItem[] = [
 	},
 	{
 		title: 'fantasy',
-		icon: '🏰',
+		icon: '🦄',
 	},
 	{
 		title: 'drama',
@@ -23,7 +23,7 @@ export const genres: IGenreItem[] = [
 	},
 	{
 		title: 'horror',
-		icon: '🦴',
+		icon: '😱',
 	},
 	{
 		title: 'adventure',
@@ -34,11 +34,7 @@ export const genres: IGenreItem[] = [
 		icon: '💥',
 	},
 	{
-		title: 'noir',
-		icon: '🧐',
-	},
-	{
 		title: 'thriller',
-		icon: '🧥',
+		icon: '🧩',
 	},
 ];
