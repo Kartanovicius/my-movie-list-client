@@ -22,7 +22,7 @@ const MenuItem: FC<{ item: IMenuItem; iconSize: number }> = ({
 	else if (item.link === AUTH && user) item.link = USER;
 
 	return (
-		<li className={asPath === item.link ? styles.active : ''}>
+		<li className={asPath.split('?')[0] === item.link ? styles.active : ''}>
 			<Link
 				href={
 					item.link === USER
