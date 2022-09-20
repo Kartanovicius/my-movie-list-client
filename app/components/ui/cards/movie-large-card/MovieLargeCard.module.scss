@@ -22,14 +22,33 @@
 		@apply absolute flex flex-col gap-3 bottom-0 left-0 py-5 px-7 z-10;
 		&-title {
 			@apply font-bold text-3xl;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 3; /* number of lines to show */
+			line-clamp: 3;
+			-webkit-box-orient: vertical;
 		}
 
 		&-description {
 			@apply text-sm font-light;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 4; /* number of lines to show */
+			line-clamp: 4;
+			-webkit-box-orient: vertical;
 		}
 
 		&-additional-info {
 			@apply text-sm flex flex-row gap-3 font-light;
+
+			&-items {
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				max-width: 40vw;
+			}
 		}
 	}
 
