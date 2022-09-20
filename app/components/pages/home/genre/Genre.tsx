@@ -3,18 +3,14 @@ import { FC } from 'react';
 
 import Button, { ButtonIcon } from '@components/ui/button/Button';
 
+import { toTitleCase } from '@utils/textConverter';
+
 import styles from './Genre.module.scss';
 import { genres } from './genre.data';
 
 const Genre: FC = () => {
 	const router = useRouter();
 	const { query } = useRouter();
-
-	function toTitleCase(str: string) {
-		return str.replace(/\w\S*/g, function (txt) {
-			return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-		});
-	}
 
 	function onClickHandler(type: string) {
 		if (type === genres[0].name) {
