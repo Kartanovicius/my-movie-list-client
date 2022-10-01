@@ -7,12 +7,11 @@ import styles from './Sidebar.module.scss';
 
 const Sidebar: FC = () => {
 	return (
-		<>
-			<div className={styles.sidebar_container}></div>
+		<div className={styles.sidebar_container}>
 			<aside className={styles.sidebar}>
 				<Menu items={menu} iconSize={30} />
 			</aside>
-		</>
+		</div>
 	);
 };
 

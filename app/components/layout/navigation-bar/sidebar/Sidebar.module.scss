@@ -1,10 +1,13 @@
 .sidebar_container {
-	@apply hidden md:block w-1/12;
-}
+	@apply md:block w-1/12;
+	max-width: 100px;
 
-.sidebar {
-	@apply fixed py-8 bg-cyan-800 min-h-full hidden md:block w-1/12;
-	ul {
-		@apply flex flex-col gap-4;
+	.sidebar {
+		@apply fixed py-8 bg-cyan-800 min-h-full hidden md:block;
+		max-width: 100px;
+		width: inherit;
+		ul {
+			@apply flex flex-col gap-4;
+		}
 	}
 }
