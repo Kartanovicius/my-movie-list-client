@@ -1,11 +1,9 @@
 .sidebar_container {
-	@apply md:block w-1/12;
-	max-width: 100px;
+	@apply hidden md:block bg-cyan-800 min-h-full w-[100px];
 
 	.sidebar {
-		@apply fixed py-8 bg-cyan-800 min-h-full hidden md:block;
-		max-width: 100px;
-		width: inherit;
+		@apply fixed py-8;
+		width: 100px;
 		ul {
 			@apply flex flex-col gap-4;
 		}
