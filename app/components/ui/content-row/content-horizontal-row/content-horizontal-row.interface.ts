@@ -7,9 +7,7 @@ interface IContentHorizontalRowLinkProps {
 	query?: string;
 }
 
-interface IContentHorizontalRowItemProps {
-	size?: number;
-}
+interface IContentHorizontalRowItemProps {}
 
 export type IContentHorizontalRowName = HTMLAttributes<HTMLHeadingElement> &
 	IContentHorizontalRowLinkProps;

@@ -23,7 +23,7 @@
 	}
 
 	&-content {
-		@apply flex flex-row justify-between items-end gap-3;
+		@apply flex flex-row justify-between items-end gap-3 2xl:text-lg;
 		width: inherit;
 
 		&-title {
@@ -34,7 +34,7 @@
 		}
 
 		&-additional-info {
-			@apply text-sm flex flex-row gap-3 font-light text-gray-500 whitespace-nowrap;
+			@apply text-sm 2xl:text-base flex flex-row gap-3 font-light text-gray-500 whitespace-nowrap;
 		}
 	}
 }

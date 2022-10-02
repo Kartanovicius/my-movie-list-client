@@ -48,16 +48,9 @@ export const ContentHorizontalRowItemContainer: FC<
 
 export const ContentHorizontalRowItem: FC<
 	PropsWithChildren<IContentHorizontalRowItem>
-> = ({ className, pathname, query, size, children, ...rest }) => {
+> = ({ className, pathname, query, children, ...rest }) => {
 	return (
-		<li
-			className={cn(
-				'content-horizontal-row-item',
-				size && `col-span-${size}`,
-				className,
-			)}
-			{...rest}
-		>
+		<li className={cn('content-horizontal-row-item', className)} {...rest}>
 			{pathname ? (
 				<Link href={{ pathname: pathname, query: query }}>
 					<a>{children}</a>

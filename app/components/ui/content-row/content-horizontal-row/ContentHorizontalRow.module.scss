@@ -11,13 +11,13 @@
 
 	&-item-container {
 		@apply grid gap-4 grid-cols-none grid-flow-col
-    	w-full h-full overflow-x-scroll scrollbar-hide scroll-smooth;
-		grid-auto-columns: calc(12.5% - 1rem);
+    	w-full h-full overflow-x-scroll scroll-smooth scrollbar-hide;
+		grid-auto-columns: calc(10% - 1rem);
 		width: calc(100% + 1.5rem);
 		padding-right: 1.5rem;
 	}
 
 	&-item {
-		@apply col-span-5 md:col-span-2;
+		@apply col-span-5 md:col-span-3 lg:col-span-2;
 	}
 }

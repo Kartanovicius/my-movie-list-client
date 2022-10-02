@@ -36,7 +36,7 @@ const Catalog: FC = () => {
 								pathname={'show'}
 								query={show.id.toString()}
 								key={show.id}
-								size={2}
+								className={'col-span-6 md:col-span-4 lg:col-span-2'}
 							>
 								<MovieSmallCard
 									showId={show.id}
@@ -73,7 +73,7 @@ const Catalog: FC = () => {
 								pathname={'show'}
 								query={show.id.toString()}
 								key={show.id}
-								size={2}
+								className={'col-span-6 md:col-span-4 lg:col-span-2'}
 							>
 								<MovieSmallCard
 									showId={show.id}
