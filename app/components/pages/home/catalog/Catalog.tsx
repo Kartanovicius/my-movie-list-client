@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { FC } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 
@@ -18,8 +19,13 @@ import { showApi } from '@store/api/show.api';
 import styles from './Catalog.module.scss';
 
 const Catalog: FC = () => {
-	const { data: highestRatedShows } = showApi.useGetHighestRatedShowQuery();
-	const { data: mostViewedShows } = showApi.useGetMostViewedShowQuery();
+	const { query } = useRouter();
+	const { data: highestRatedShows } = showApi.useGetHighestRatedShowQuery(
+		query.type,
+	);
+	const { data: mostViewedShows } = showApi.useGetMostViewedShowQuery(
+		query.type,
+	);
 	if (!highestRatedShows || !mostViewedShows) return null;
 
 	return (

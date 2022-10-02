@@ -1,6 +1,9 @@
 import { IShow, IShowDto } from 'types/show.interface';
 
 import { api } from '@store/api/api';
+import { IShowApi } from '@store/types/ShowApi.interface';
+
+const queryString = require('query-string');
 
 const SHOW = 'show';
 
@@ -11,21 +14,27 @@ export const showApi = api.injectEndpoints({
 				url: `/${SHOW}`,
 			}),
 		}),
-		getShowById: builder.query<IShow, number>({
-			query: id => `/${SHOW}/${id}`,
-			providesTags: (result, error, id) => [{ type: 'Show', id }],
+		getShowById: builder.query<IShow, IShowApi>({
+			query: ({ id, genre }) => ({
+				url: `/${SHOW}/${id}`,
+				params: { 'genre[]': genre },
+			}),
+			providesTags: (result, error, { id }) => [{ type: 'Show', id }],
 		}),
-		getMostViewedShow: builder.query<IShow[], void>({
-			query: () => `/${SHOW}/most-viewed`,
+		getMostViewedShow: builder.query<IShow[], string | string[] | undefined>({
+			query: genre => `/${SHOW}/most-viewed
+				?${queryString.stringify({ genre: genre }, { arrayFormat: 'bracket' })}`,
 			providesTags: () => [{ type: 'Show' }],
 		}),
-		getHighestRatedShow: builder.query<IShow[], void>({
-			query: () => `/${SHOW}/highest-rated`,
+		getHighestRatedShow: builder.query<IShow[], string | string[] | undefined>({
+			query: genre => `/${SHOW}/highest-rated
+				?${queryString.stringify({ genre: genre }, { arrayFormat: 'bracket' })}`,
 			providesTags: () => [{ type: 'Show' }],
 		}),
-		getLastAddedShow: builder.query<IShow, void>({
-			query: () => ({
-				url: `/${SHOW}`,
+		getLastAddedShow: builder.query<IShow, string | string[] | undefined>({
+			query: genre => ({
+				url: `/${SHOW}
+					?${queryString.stringify({ genre: genre }, { arrayFormat: 'bracket' })}`,
 				params: { 'per-page': 1, page: 1, order: 'DESC' },
 			}),
 			providesTags: () => [{ type: 'Show' }],

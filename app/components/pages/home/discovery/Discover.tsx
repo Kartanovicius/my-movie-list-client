@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { FC } from 'react';
 import ContentLoader from 'react-content-loader';
 import { AiFillStar } from 'react-icons/ai';
@@ -16,9 +17,9 @@ import { textConverter, toTitleCase } from '@utils/textConverter';
 import styles from './Discover.module.scss';
 
 const Discover: FC = () => {
+	const { query } = useRouter();
 	const { data: lastAddedShow, isLoading: loadingLastAddedShow } =
-		showApi.useGetLastAddedShowQuery();
-	if (!lastAddedShow) return null;
+		showApi.useGetLastAddedShowQuery(query.type);
 
 	return (
 		<div className={styles.discover}>
@@ -37,7 +38,7 @@ const Discover: FC = () => {
 					/>
 				</ContentLoader>
 			)}
-			{!loadingLastAddedShow && (
+			{!loadingLastAddedShow && lastAddedShow && (
 				<MovieLargeCard
 					showId={lastAddedShow.id}
 					img={{
