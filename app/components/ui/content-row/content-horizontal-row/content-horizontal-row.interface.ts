@@ -4,7 +4,7 @@ export interface IContentHorizontalRow extends HTMLAttributes<HTMLDivElement> {}
 
 interface IContentHorizontalRowLinkProps {
 	pathname?: string;
-	query?: string;
+	query?: object;
 }
 
 interface IContentHorizontalRowItemProps {}

@@ -40,7 +40,7 @@ const Catalog: FC = () => {
 						return (
 							<ContentHorizontalRowItem
 								pathname={'show'}
-								query={show.id.toString()}
+								query={{ id: show.id.toString() }}
 								key={show.id}
 								className={'col-span-6 md:col-span-4 lg:col-span-2'}
 							>
@@ -77,7 +77,7 @@ const Catalog: FC = () => {
 						return (
 							<ContentHorizontalRowItem
 								pathname={'show'}
-								query={show.id.toString()}
+								query={{ id: show.id.toString() }}
 								key={show.id}
 								className={'col-span-6 md:col-span-4 lg:col-span-2'}
 							>
