@@ -1,7 +1,6 @@
 import { IShow, IShowDto } from 'types/show.interface';
 
 import { api } from '@store/api/api';
-import { IShowApi } from '@store/types/ShowApi.interface';
 
 const queryString = require('query-string');
 
@@ -14,12 +13,11 @@ export const showApi = api.injectEndpoints({
 				url: `/${SHOW}`,
 			}),
 		}),
-		getShowById: builder.query<IShow, IShowApi>({
-			query: ({ id, genre }) => ({
-				url: `/${SHOW}/${id}`,
-				params: { 'genre[]': genre },
+		getShowById: builder.query<IShow, number>({
+			query: id => ({
+				url: `/${SHOW}/by-id/${id}`,
 			}),
-			providesTags: (result, error, { id }) => [{ type: 'Show', id }],
+			providesTags: (result, error, id) => [{ type: 'Show', id }],
 		}),
 		getMostViewedShow: builder.query<IShow[], string | string[] | undefined>({
 			query: genre => `/${SHOW}/most-viewed
@@ -70,4 +68,5 @@ export const showApi = api.injectEndpoints({
 			invalidatesTags: (result, error, id) => [{ type: 'Show', id }],
 		}),
 	}),
+	overrideExisting: false,
 });
