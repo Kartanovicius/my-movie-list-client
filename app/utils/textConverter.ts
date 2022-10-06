@@ -4,7 +4,7 @@ export function toTitleCase(str: string) {
 	});
 }
 
-export function textConverter(totalMinutes: number | undefined) {
+export function toVideoDuration(totalMinutes: number | undefined) {
 	if (totalMinutes === undefined) return null;
 	const minutes = totalMinutes % 60;
 	const hours = Math.floor(totalMinutes / 60);

@@ -12,7 +12,7 @@ import MovieLargeCard, {
 
 import { showApi } from '@store/api/show.api';
 
-import { textConverter, toTitleCase } from '@utils/textConverter';
+import { toTitleCase, toVideoDuration } from '@utils/textConverter';
 
 import styles from './Discover.module.scss';
 
@@ -53,7 +53,7 @@ const Discover: FC = () => {
 					</MovieLargeCardDescription>
 					<MovieLargeCardAdditionalInfo>
 						<MovieLargeCardAdditionalInfoItem>
-							{textConverter(lastAddedShow.duration)}
+							{toVideoDuration(lastAddedShow.duration)}
 						</MovieLargeCardAdditionalInfoItem>
 						<MovieLargeCardAdditionalInfoItem>
 							{lastAddedShow.genre.map((genre, index) =>
