@@ -1,10 +1,11 @@
+import { ParsedUrlQueryInput } from 'querystring';
 import { HTMLAttributes } from 'react';
 
 export interface IContentHorizontalRow extends HTMLAttributes<HTMLDivElement> {}
 
 interface IContentHorizontalRowLinkProps {
 	pathname?: string;
-	query?: object;
+	query?: ParsedUrlQueryInput;
 }
 
 interface IContentHorizontalRowItemProps {}
