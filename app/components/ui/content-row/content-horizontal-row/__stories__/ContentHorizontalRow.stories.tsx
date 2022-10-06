@@ -32,17 +32,17 @@ Default.args = {
 				Default Name
 			</ContentHorizontalRowName>
 			<ContentHorizontalRowItemContainer>
-				<ContentHorizontalRowItem pathname={'ccc'} size={1}>
+				<ContentHorizontalRowItem pathname={'ccc'}>
 					<div className={'bg-red-50 text-black text-center'}>
 						With Pathname and Size 1
 					</div>
 				</ContentHorizontalRowItem>
-				<ContentHorizontalRowItem pathname={'ccc'} size={2}>
+				<ContentHorizontalRowItem pathname={'ccc'}>
 					<div className={'bg-red-100 text-black text-center'}>
 						With Pathname and Size 2
 					</div>
 				</ContentHorizontalRowItem>
-				<ContentHorizontalRowItem size={3}>
+				<ContentHorizontalRowItem>
 					<div className={'bg-red-200 text-black text-center'}>
 						Without Pathname and Size 3
 					</div>
